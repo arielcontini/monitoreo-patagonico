@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo Patagonico - Card Producto</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="min-h-screen min-w-screen bg-gray-900">
+
+<!-- CABEZAS PRESENTE! -->    
+    <header class="bg-gray-800 text-gray-900  items-center">
+
+        <nav x-data="{open:false}" class="w-full fixed z-10 text-gray-100 px-2 bg-gray-800">
+        
+    <ul class="flex justify-between">
+        <li class="h-8 py-1 "><img class="w-16 p-2" src="./iso.svg" alt="logo-monitoreo patagonico"></li>
+        <li @click="open=true" class="text-4xl cursor-pointer  ">&equiv;</li>
+    </ul>
+    <ul class="mx-auto">
+        <li class=" mt-2 m-3"> <input type="search" name="" id="" class="form-control" placeholder="búsqueda">  </li>
+    </ul>
+
+         <!-- filtros -->
+    <ul x-show="open"@click.away="open=false" class="md:flex py-1 mx-2 justify-around">
+        
+        <li class="mx-2 flex">Precio
+            <p class="ml-2">$</p>
+            <p class="ml-2 text-primary">$$</p>
+            <p class="ml-2">$$$</p>
+        </li>
+        <li class="mx-2 flex">Calificación
+            <p class="ml-1 text-primary">&starf;</p>
+            <p class="ml-px text-primary">&starf;</p>
+            <p class="ml-px text-primary">&starf;</p>
+            <p class="ml-px text-primary">&starf;</p>
+            <p class="ml-px">&starf;</p>
+        </li>
+        <li><button class="btn mx-auto first-letter:btn-primary">Filtrar</button></li>
+    </ul>
+        
+    </nav>
+     
+    <section class="h-100 md:h-100 bg-cover bg-center"
+    style="
+    background-image: 
+    url(./img/bg.png);
+    ">
+    </section>   
+</header>
+
+<!-- ACÁ EMPIEZA EL CONTENIDO -->
+<main class="container mx-auto mb-8">
+
+ <!-- CANVA PRINCIPAL -->     
+<section class="md:flex">
+
+<!-- CARD -->
+    <article  class="md:mx-0 mx-2 mt-4 md:w-1/2 md:flex md:bg-gray-800 ">
+    
+
+    <img class="w-full md:w-48 md:h-full object-cover object-left rounded-sm md:rounded-r-none" 
+    src="./img/bg.png" alt="">
+
+    
+    <div class="relative mx-2 p-2 md:shadow-none shadow-lg bg-gray-800 md:bg-red">
+    
+        <h2 class="text-lg tracking-tight font-semibold uppercase text-yellow-500 md:text-lg p-1">City Mesh</h2>
+        
+        <p class="tracking-tight mx-2 mt-1 text-gray-100 text-md leading-snug font-normal font-mono">Protegé tu Casa o Empresa con lo último en Seguridad Digital.</p>
+        
+        <button class="hover:bg-yellow-500 transition ease shadow-sm mt-4 mb-4 p-4 text-md rounded text-gray-100 bg-red-800 "><a href="./">Consultar Presupuesto</a></button> <p class="mt-2 text-yellow-200">&starf;&starf;&starf;&starf;&starf; | 6 Reseñas</p>
+        
+        </div>    
+    </article>  
+
+   <!-- CARD -->
+   <article  class="md:ml-2 md:mx-0 mx-2 mt-4 md:w-1/2 md:flex md:bg-gray-800 ">
+    
+
+    <img class="w-full md:w-48 md:h-full object-cover object-left rounded-sm md:rounded-r-none" 
+    src="./img/bg.png" alt="">
+    
+    <div class="relative mx-2 p-2 md:shadow-none shadow-lg bg-gray-800 md:bg-red">
+    
+    <h2 class="text-lg tracking-tight font-semibold uppercase text-yellow-500 md:text-lg p-1">City Mesh</h2>
+    
+    <p class="tracking-tight mt-2 mx-1 text-gray-100 text-md leading-snug font-normal font-mono">Protegé tu Casa o Empresa con lo último en Seguridad Digital.</p>
+    
+    <button class="hover:bg-yellow-500 transition ease shadow-sm mt-4 mb-4 p-4 text-md rounded text-gray-100 bg-red-800 "><a href="./">Consultar Presupuesto</a></button> <p class="mt-2 text-yellow-200">&starf;&starf;&starf;&starf;&starf; | 6 Reseñas</p>
+    
+    </div>    
+    </article>   
+    
+
+
+
+    </section>
+
+<!-- FORMULARIO -->  
+    <form action="" class="m-8 mt-4 p-4 align-center mx-auto text-gray-200">
+<h2 class="m-4 p-1 inline-block mx-auto text-center bg-red-700 w-full text-3xl text-gray-200 text-bold"> CONTACTANOS </h2>
+        <label class="p-2" for="name">Nombre</label>
+        <input class="form-control"  type="text" id="name" placeholder="nombre">
+        
+        <label class="p-2" for="email">E Mail</label>
+        <input class="form-control" type="text" id="email" placeholder="email">
+        
+        <label class="p-2" for="">Comentarios</label>
+        <textarea  class="form-control" name="" cols="30" rows="10" id="" placeholder="comentario">
+        </textarea>
+        <button class="btn"> Enviar</button>
+         </form>
+
+
+</main> 
+
+<!-- PIE DE PAGINA! -->  
+
+<footer class="text-gray-400 w-full bg-secondary bg-gray-800 p-2">
+<article class="md:flex-row-reverse md:flex justify-around ">
+    <ul class="mt-4 ml-8 ">
+        <li class="hover:text-red-800 transition ease-out">Facebook</li>
+        <li class="hover:text-red-800 transition ease-out">Instagram</li>
+        <li class="hover:text-red-800 transition ease-out">Whatsapp</li>
+        </ul>
+    
+<ul class=" mt-4  ml-8 md:list-disc">
+<li>Soporte</li>
+<li>Acerca de nosotros</li>
+<li>F.A.Q</li>
+<li>Aviso de Privacidad</li>
+</ul>
+
+</article>
+</footer>
+
+<!-- FINAL DE LA MAQUETA -->  
+<script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
